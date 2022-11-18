@@ -1,0 +1,74 @@
+a = float(input())
+if a in range(11, 22) or a in range(30, 40):
+    print("точка в диапозоне")
+else: print("точка не в диапозоне")
+
+a = float(input())
+b = float(input())
+if (a in range(-5, 1) and b in range(-5, 1)) or (b in range(3, 8) and a in range(3, 8)):
+    print("да")
+else: print("нет")
+
+S = float(input())
+t = float(input())
+V = S/t
+if V < 30:
+    print('медленно')
+elif V > 30 and V < 60:
+    print('средне')
+else: print("быстро")
+
+
+k = int(input())
+a = k//100
+b = k//10%10
+c = k%10
+A = max(a,b,c)
+B = min(a,b,c)
+C = a+b+c-A-B
+if A-B == C:
+    print('число n "интересное"')
+else: print('число n "не интересное"')
+
+print('задание 5')
+
+a = str(input())
+if len(a)>15:
+    print('Ник-нейм должен состоять максимум из 15 символов!')
+elif len(a)<3:
+    print("Ник-нейм должен состоять минимум из 3 символов!")
+else: print("ник принят")
+
+print("задание 6")
+print('ведите х, не равный нулю')
+x = float(input())
+print('введите у, не равный нулю')
+y = float(input())
+if x > 0 and y > 0:
+    print('точка принадлежит первой четверти')
+    print('Введите 2 строки')
+    a = str(input())
+    b = str(input())
+    print(min(a,b))
+elif x < 0 and y > 0:
+    print('точка принадлежит второй четверти')
+    f = ((2 * abs(x)-y) / y**2)
+    print(f)
+elif x < 0 and y < 0:
+    print('точка принадлежит третьей четверти')
+    print('Введите строку')
+    print(x * len(str(input())))
+    print(y * len(str(input())))
+else:
+    print('точка принадлежит четвёртой четверти')
+    if abs(x) > abs(y):
+        print('х большая по модулю')
+    elif abs(y) > abs(x):
+        print('у большая по модулю')
+    else:
+        print('координаты равны по модулю')
+
+print('задание 7')
+a = str(input())
+if "кот" or "Кот" in a:
+    print('Мы погладили кота!')
